@@ -1,0 +1,42 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    padding: 40px 20px;
+    margin: 0 auto;
+
+}
+
+header h1{
+    display: inline;
+    font-size: 3rem;
+    font-weight: 1000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 800px) {
+    header{
+        flex-direction: column;
+        gap:20px;
+    }
+}
+
+.menu li a{
+    font-weight: 600;
+    color: #141414;
+    font-size: 1.125rem;
+    padding: 10px 20px;
+    display: inline-block;
+    background-color: lightgray;
+    border-radius: 4px;
+}
