@@ -1,0 +1,144 @@
+/* Título */
+
+.indroducao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.avatar{
+    justify-self: center;
+}
+
+.introducao-content h1{
+    font-size: 4.5rem;
+}
+
+.introducao-content p{
+    font-size: 2rem;
+}
+
+@media (max-width: 1000px){
+    .introducao-content h1{
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 600px){
+    .avatar{
+        width: 50%;
+    }
+    .indroducao {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .introducao-content{
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px){
+    .introducao-content h1{
+        font-size: 2rem;
+    }
+    .introducao-content p{
+        font-size: 1rem;
+    }
+
+}
+
+/* Experiência */
+
+.exp{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 1200px;
+    margin: 100px auto 0 auto;
+    gap: 100px;
+}
+
+.exp div h2{
+    font-size: 6rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    line-height: 1.1;
+}
+
+.exp-content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.exp-content p{
+    font-size: 2rem;
+}
+
+.exp-item{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: relative;
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.exp-item span{
+    position:absolute;
+    top: 10px;
+    left: -50px;
+}
+
+.exp-item-titulo{
+    font-size: 1.5rem;
+}
+
+.exp-item-titulo::before{
+    position:absolute;
+    left: -10px;
+    content: "";
+    width: 5px;
+    height: 1.5rem;
+    background-color: #f49497;
+    
+}
+
+.exp-item p{
+    font-size: 1rem;
+}
+
+.exp-item-tech{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    gap: 10px;
+}
+
+.exp-item-tech li{
+    display:inline-block;
+    background-color: #f49497;
+    height: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.exp-item a{
+    position: relative;
+    display: inline-block;
+    font-size: 1.125rem;
+    background-color: BLACK;
+    color: white;
+    width: 7ch;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    
+}
