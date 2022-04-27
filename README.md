@@ -1,2 +1,2 @@
-# meu-portifolio
-Meu portifólio em forma de site. 
+# meu-portfolio
+Meu portfólio em forma de site. 
