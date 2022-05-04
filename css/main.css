@@ -4,8 +4,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 20px;
-    padding: 0 20px;
+    gap: 100px;
+    padding: 0 40px;
     margin: 0 auto;
     max-width: 1200px;
 }
@@ -14,12 +14,21 @@
     justify-self: center;
 }
 
+.avatar img{
+    border-radius: 50%;
+    border: 2px solid #f1f1f1;
+    box-shadow: 0 1px 2px #272f34;
+}
+
+
 .introducao-content h1{
+    font-family: "Italiana", sans-serif;
     font-size: 4.5rem;
 }
 
 .introducao-content p{
     font-size: 2rem;
+    font-weight: 300;
 }
 
 @media (max-width: 1000px){
@@ -29,13 +38,14 @@
 
 }
 
-@media (max-width: 600px){
+@media (max-width: 800px){
     .avatar{
         width: 50%;
     }
     .indroducao {
         grid-template-columns: 1fr;
         justify-content: center;
+        gap: 20px;
     }
     .introducao-content{
         text-align: center;
@@ -55,22 +65,21 @@
 /* Experiência */
 
 .exp{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: grid;  
     max-width: 1200px;
     margin: 100px auto 0 auto;
-    gap: 100px;
-    padding: 0 20px;
+    gap: 50px;
+    padding: 0 40px;
+    font-weight: 400;
     margin-bottom: 100px;
 }
 
 .exp div h2{
     font-size: 7rem;
     text-transform: uppercase;
-    font-weight: bolder;
-    word-break: break-all;
-    max-width: 6ch;
-    text-shadow: 5px 5px 3px #8ef8a0;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 3px 3px 3px #8ef8a0;
 }
 
 .exp-content{
@@ -93,13 +102,6 @@
     border-radius: 5px;
     margin-top: 20px;
 }
-
-.exp-item span{
-    position:absolute;
-    top: 10px;
-    left: -50px;
-}
-
 .exp-item-titulo{
     font-size: 1.5rem;
 }
@@ -111,7 +113,6 @@
     width: 5px;
     height: 1.5rem;
     background-color: #8ef8a0;
-    
 }
 
 .exp-item p{
@@ -152,7 +153,7 @@
     color: #272f34;
 }
 
-@media (max-width: 800px){
+@media (max-width: 900px){
     .exp{
         grid-template-columns: 1fr;
         gap: 40px;
@@ -170,7 +171,7 @@
     }
 }
 
-@media (max-width: 600px){
+@media (max-width: 700px){
     .exp-content p{
         font-size: 1.5rem;
     }
@@ -180,23 +181,27 @@
     .exp-item p{
         font-size: 1rem;
     }
-}
-
-@media (max-width: 400px){
-    .exp-content p{
-        font-size: 1.25rem;
-    }
-    .exp div h2{
-        font-size: 3rem;
-    }
     .exp-item{
         grid-template-columns: 1fr;
     }
+}
+
+@media (max-width: 500px){
+    .exp{
+        padding: 0 10px;
+    }   
+
+    .exp-content p{
+        font-size: 1rem;
+    }
+    .exp div h2{
+        font-size: 2rem;
+    }
     .exp-item-cargo{
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
     .exp-item p{
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
 }
 
@@ -209,22 +214,20 @@
 
 .container{
     display: grid;
-    grid-template-columns: 1fr 2fr;
     max-width: 1200px;
     margin: 100px auto 0 auto;
-    gap: 100px;
-    padding: 50px 20px;
+    gap: 50px;
+    padding: 50px 40px;
     font-size: 1.25rem;
 }
 
 .formacao h2{
     font-size: 7rem;
     text-transform: uppercase;
-    font-weight: bolder;
-    word-break: break-all;
-    max-width: 6ch;
+    text-align: center;
+    font-weight: 700;
     color: #f1f1f1;
-    text-shadow: 5px 5px 3px #272f34;
+    text-shadow: 3px 3px 3px #272f34;
 }
 
 .formacao-content{
@@ -355,12 +358,15 @@
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 500px){
+    .container{
+        padding: 50px 10px;
+    }
     .formacao-content-academica p{
         font-size: 1.25rem;
     }
     .formacao h2{
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .exp-item{
         grid-template-columns: 1fr;
@@ -372,10 +378,10 @@
         font-size: 1rem;
     }
     .formacao-content-intensiva-lista{
-        font-size: 1rem;
+        font-size: 0.75rem;
     }
     .formacao-content-academica-lista li{
-        width: 20ch;
+        width: 15ch;
     }
 
 }

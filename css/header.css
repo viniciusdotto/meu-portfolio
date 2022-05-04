@@ -1,39 +1,40 @@
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 100px;
     max-width: 1200px;
-    padding: 40px 20px;
+    padding: 40px;
     margin: 0 auto;
 
 }
 
 header h1{
-    display: inline;
-    font-size: 3rem;
-    font-weight: 1000;
-    text-transform: uppercase;
+    font-family: 'Italiana', sans-serif;
+    display: inline-block;
+    font-size: 4rem;
     text-align: center;
 }
 
 .menu{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
+    margin: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     header{
-        justify-content: center;
-        flex-direction: column;
-        gap:20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
 .menu li a{
-    font-weight: 600;
+    font-weight: 400;
     color: #141414;
     font-size: 1.125rem;
     padding: 10px 20px;
@@ -46,4 +47,14 @@ header h1{
     color: #8ef8a0;
     background-color: #141414;
 
+}
+
+@media (max-width: 500px) {
+    header h1{
+        font-size: 3rem;
+    }
+    .menu li a{
+        font-size: 1rem;
+        display: block;
+    }
 }
