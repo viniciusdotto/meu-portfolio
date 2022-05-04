@@ -112,7 +112,7 @@
     content: "";
     width: 5px;
     height: 1.5rem;
-    background-color: #8ef8a0;
+    background-color: $cor-primaria-lighter;
 }
 
 .exp-item p{
@@ -212,7 +212,7 @@
     
 }
 
-.container{
+.containers{
     display: grid;
     max-width: 1200px;
     margin: 100px auto 0 auto;
