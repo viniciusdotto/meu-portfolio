@@ -1,6 +1,11 @@
+// Reset dos estilos
 @import 'reset';
+// Cores e Tipografia
 @import 'cores';
+@import 'tipografia';
+// Estilos Gerais
 @import 'geral';
+// Estilos de cada seção
 @import 'header';
 @import 'main';
 @import 'footer';
