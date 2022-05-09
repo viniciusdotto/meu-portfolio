@@ -5,6 +5,7 @@
     @else if $type == title-2{
         font-family: 'Radio Canada', Arial, Helvetica, sans-serif;
         font-weight: 700;
+        text-transform: uppercase;
     }
     @else if $type == general{
         font-family: monospace, Arial, Helvetica, sans-serif;
