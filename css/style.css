@@ -82,12 +82,26 @@ body img {
   gap: 100px;
 }
 
+@media (max-width: 1000px) {
+  .header header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 .header h1 {
   font-family: 'Italiana', 'Times New Roman', Times, serif;
   line-height: 74px;
   font-size: 4rem;
   display: inline-block;
   text-align: center;
+}
+
+@media (max-width: 500px) {
+  .header h1 {
+    line-height: 58px;
+    font-size: 3rem;
+  }
 }
 
 .header__menu {
@@ -101,7 +115,7 @@ body img {
 .header__menu li a {
   font-family: monospace, Arial, Helvetica, sans-serif;
   line-height: 30px;
-  font-size: 4rem;
+  font-size: 1.25rem;
   font-weight: 400;
   color: #141414;
   font-size: 1.125rem;
@@ -116,18 +130,9 @@ body img {
   background-color: #46f463;
 }
 
-@media (max-width: 1000px) {
-  header {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
 @media (max-width: 500px) {
-  header h1 {
-    font-size: 3rem;
-  }
-  .menu li a {
+  .header__menu li a {
+    line-height: 26px;
     font-size: 1rem;
     display: block;
   }
