@@ -1,12 +1,12 @@
 body{
-    font-family: 'Radio Canada', Arial, sans-serif;
+    @include font(general);
+    @include size(1.25);
     color: $cor-secundaria-darker;
     background-color: $cor-detalhe-lighter;
     .container{
         max-width: 1200px;
         margin: 0 auto;
         padding: 40px;
-        font-size: 1.25rem;
     }
     a {
         text-decoration: none;

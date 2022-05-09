@@ -54,7 +54,9 @@ table {
 }
 
 body {
-  font-family: 'Radio Canada', Arial, sans-serif;
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  line-height: 30px;
+  font-size: 1.25rem;
   color: black;
   background-color: white;
 }
@@ -63,7 +65,6 @@ body .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px;
-  font-size: 1.25rem;
 }
 
 body a {
@@ -139,61 +140,79 @@ body img {
 }
 
 /* Título */
-.indroducao {
+.title {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 100px;
-  padding: 0 40px;
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.avatar {
-  justify-self: center;
-}
-
-.avatar img {
-  border-radius: 50%;
-  border: 2px solid #f1f1f1;
-  box-shadow: 0 1px 2px #272f34;
-}
-
-.introducao-content h1 {
-  font-family: "Italiana", sans-serif;
-  font-size: 4.5rem;
-}
-
-.introducao-content p {
-  font-size: 2rem;
-  font-weight: 300;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 @media (max-width: 1000px) {
-  .introducao-content h1 {
-    font-size: 3rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .avatar {
-    width: 50%;
-  }
-  .indroducao {
+  .title {
     grid-template-columns: 1fr;
     justify-content: center;
     gap: 20px;
   }
-  .introducao-content {
+}
+
+.title__avatar {
+  justify-self: center;
+}
+
+@media (max-width: 1000px) {
+  .title__avatar {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .title__avatar {
+    width: 80%;
+  }
+}
+
+.title__avatar img {
+  border-radius: 50%;
+  border: 2px solid #f1f1f1;
+  box-shadow: 0 1px 2px #141414;
+}
+
+@media (max-width: 1000px) {
+  .title__content {
     text-align: center;
   }
 }
 
-@media (max-width: 400px) {
-  .introducao-content h1 {
+.title__content h1 {
+  font-family: 'Italiana', 'Times New Roman', Times, serif;
+  line-height: 74px;
+  font-size: 4rem;
+}
+
+@media (max-width: 1000px) {
+  .title__content h1 {
+    line-height: 58px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .title__content h1 {
+    line-height: 42px;
     font-size: 2rem;
   }
-  .introducao-content p {
+}
+
+.title__content p {
+  line-height: 42px;
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .title__content p {
+    line-height: 26px;
     font-size: 1rem;
   }
 }
