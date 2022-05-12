@@ -247,6 +247,20 @@ body img {
   text-shadow: 3px 3px 3px #8ef8a0;
 }
 
+@media (max-width: 1000px) {
+  .experience div h2 {
+    line-height: 58px;
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .experience div h2 {
+    line-height: 42px;
+    font-size: 2rem;
+  }
+}
+
 .experience-content {
   display: grid;
   grid-template-columns: 1fr;
@@ -262,6 +276,13 @@ body img {
   .experience-content p {
     line-height: 34px;
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .experience-content p {
+    line-height: 30px;
+    font-size: 1.25rem;
   }
 }
 
@@ -282,9 +303,22 @@ body img {
   }
 }
 
+@media (max-width: 500px) {
+  .experience-content-item {
+    gap: 10px;
+  }
+}
+
 .experience-content-item p {
   line-height: 30px;
   font-size: 1.25rem;
+}
+
+@media (max-width: 500px) {
+  .experience-content-item p {
+    line-height: 26px;
+    font-size: 1rem;
+  }
 }
 
 .experience-content-item a {
@@ -301,6 +335,13 @@ body img {
 
 .experience-content-item a:hover {
   background-color: black;
+}
+
+@media (max-width: 500px) {
+  .experience-content-item a {
+    line-height: 26px;
+    font-size: 1rem;
+  }
 }
 
 .experience-content-item__title1 {
@@ -320,12 +361,26 @@ body img {
   background-color: #8ef8a0;
 }
 
+@media (max-width: 500px) {
+  .experience-content-item__title1 {
+    line-height: 30px;
+    font-size: 1.25rem;
+  }
+}
+
 .experience-content-item__title2 {
   font-family: 'Radio Canada', Arial, Helvetica, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 30px;
   font-size: 1.25rem;
+}
+
+@media (max-width: 500px) {
+  .experience-content-item__title2 {
+    line-height: 26px;
+    font-size: 1rem;
+  }
 }
 
 .experience-content-item__tech {
@@ -342,6 +397,13 @@ body img {
   height: max-content;
   padding: 5px 10px;
   border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  .experience-content-item__tech li {
+    line-height: 26px;
+    font-size: 1rem;
+  }
 }
 
 /* Formação */
