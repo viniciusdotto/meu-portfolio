@@ -411,22 +411,31 @@ body img {
   background-color: #8ef8a0;
 }
 
-.containers {
-  display: grid;
-  max-width: 1200px;
-  margin: 100px auto 0 auto;
-  gap: 50px;
-  padding: 50px 40px;
-  font-size: 1.25rem;
+.formacao h2 {
+  margin-bottom: 50px;
+  font-family: 'Radio Canada', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 74px;
+  font-size: 4rem;
+  text-align: center;
+  color: #f1f1f1;
+  text-shadow: 3px 3px 3px #141414;
 }
 
-.formacao h2 {
-  font-size: 7rem;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 700;
-  color: #f1f1f1;
-  text-shadow: 3px 3px 3px #272f34;
+@media (max-width: 1000px) {
+  .formacao h2 {
+    line-height: 58px;
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .formacao h2 {
+    line-height: 42px;
+    font-size: 2rem;
+  }
 }
 
 .formacao-content {
@@ -440,15 +449,36 @@ body img {
 }
 
 .formacao-content-academica p {
+  line-height: 42px;
   font-size: 2rem;
 }
 
-.formacao-content-academica-lista {
+@media (max-width: 1000px) {
+  .formacao-content-academica p {
+    line-height: 34px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .formacao-content-academica p {
+    line-height: 30px;
+    font-size: 1.25rem;
+  }
+}
+
+.formacao-content-academica__lista {
   display: flex;
   gap: 20px;
 }
 
-.formacao-content-academica-lista li {
+@media (max-width: 1000px) {
+  .formacao-content-academica__lista {
+    flex-direction: column;
+  }
+}
+
+.formacao-content-academica__lista li {
   background-color: #f1f1f1;
   width: 25ch;
   display: flex;
@@ -460,21 +490,37 @@ body img {
   position: relative;
 }
 
-.formacao-content-academica-lista li p {
-  font-size: 1.25rem;
+@media (max-width: 1000px) {
+  .formacao-content-academica__lista li {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
-.formacao-content-academica-lista li h3 {
+.formacao-content-academica__lista li p {
+  line-height: 26px;
+  font-size: 1rem;
+}
+
+.formacao-content-academica__lista li h3 {
+  line-height: 34px;
   font-size: 1.5rem;
 }
 
-.formacao-content-academica-lista li h3::before {
+@media (max-width: 1000px) {
+  .formacao-content-academica__lista li h3 {
+    line-height: 30px;
+    font-size: 1.25rem;
+  }
+}
+
+.formacao-content-academica__lista li h3::before {
   position: absolute;
   left: -10px;
   content: "";
   width: 5px;
   height: 1.5rem;
-  background-color: #272f34;
+  background-color: #141414;
 }
 
 .formacao-content-intensiva {
@@ -498,17 +544,31 @@ body img {
   border-radius: 90px;
 }
 
-.formacao-content-intensiva-lista {
+.formacao-content-intensiva__lista {
   display: grid;
   gap: 10px;
 }
 
-.formacao-content-intensiva-lista li {
+@media (max-width: 1000px) {
+  .formacao-content-intensiva__lista {
+    line-height: 26px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .formacao-content-intensiva__lista {
+    line-height: 22px;
+    font-size: 0.75rem;
+  }
+}
+
+.formacao-content-intensiva__lista li {
   display: grid;
   grid-template-columns: auto auto 5ch;
 }
 
-.formacao-content-intensiva-lista li p {
+.formacao-content-intensiva__lista li p {
   text-align: right;
 }
 
@@ -533,114 +593,82 @@ body img {
   border-radius: 90px;
 }
 
-@media (max-width: 900px) {
-  .container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .formacao h2 {
-    font-size: 5rem;
-    word-break: initial;
-  }
-  .formacao-content-academica p {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .formacao-content-academica p {
-    font-size: 1.5rem;
-  }
-  .formacao h2 {
-    font-size: 4rem;
-  }
-  .formacao-content-academica-lista {
-    flex-direction: column;
+@media (max-width: 1000px) {
+  .formacao-content-idiomas ul {
+    line-height: 26px;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 500px) {
-  .container {
-    padding: 50px 10px;
-  }
-  .formacao-content-academica p {
-    font-size: 1.25rem;
-  }
-  .formacao h2 {
-    font-size: 2rem;
-  }
-  .exp-item {
-    grid-template-columns: 1fr;
-  }
-  .exp-item-cargo {
-    font-size: 1.25rem;
-  }
-  .exp-item p {
-    font-size: 1rem;
-  }
-  .formacao-content-intensiva-lista {
+  .formacao-content-idiomas ul {
+    line-height: 22px;
     font-size: 0.75rem;
-  }
-  .formacao-content-academica-lista li {
-    width: 15ch;
   }
 }
 
-footer {
-  background-color: #272f34;
+.footer {
+  background-color: #3a3a3a;
   color: #f1f1f1;
 }
 
-.container-footer {
+.footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 20px;
-  font-size: 1.5rem;
+  padding: 40px;
 }
 
-.contato {
+.footer-contato {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
 }
 
-.contato p {
+@media (max-width: 1000px) {
+  .footer-contato {
+    grid-template-columns: 1fr;
+    line-height: 26px;
+    font-size: 1rem;
+  }
+}
+
+.footer-contato p {
   max-width: 50ch;
 }
 
-.contato ul {
+.footer-contato ul {
   justify-self: right;
 }
 
-.contato ul li {
+@media (max-width: 1000px) {
+  .footer-contato ul {
+    justify-self: left;
+  }
+}
+
+.footer-contato ul li {
   color: #8ef8a0;
   max-width: 30ch;
 }
 
-.contato ul li a {
+.footer-contato ul li a {
   color: #8ef8a0;
   text-decoration: underline;
 }
 
-.contato ul li a:hover {
+.footer-contato ul li a:hover {
   color: #f1f1f1;
 }
 
-.madeby {
+.footer__madeby {
   font-size: 1rem;
 }
 
-@media (max-width: 800px) {
-  .container-footer {
-    padding-bottom: 20px;
-    font-size: 1rem;
-  }
-  .contato {
-    grid-template-columns: 1fr;
-  }
-  .contato ul {
-    justify-self: left;
-    margin-bottom: 30px;
+@media (max-width: 1000px) {
+  .footer__madeby {
+    margin-top: 20px;
+    line-height: 22px;
+    font-size: 0.75rem;
   }
 }
