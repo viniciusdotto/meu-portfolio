@@ -1,8 +1,5 @@
 .header{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    gap: 100px;
+    padding: 20px 40px;
     @include responsive(tablet){
         header{
             grid-template-columns: 1fr;
@@ -18,30 +15,30 @@
             @include size(3);
         }
     }
-}
-.header__menu{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    li a{
-        @include font(general);
-        @include size(1.25);
-        font-weight: 400;
-        color: $cor-secundaria;
-        font-size: 1.125rem;
-        padding: 10px 20px;
-        display: inline-block;
-        background-color: $cor-primaria;
-        border-radius: 4px;
-        &:hover{
-            color: $cor-secundaria-lighter;
-            background-color: $cor-primaria-darker;
-        }
-        @include responsive(cellphone){
-            @include size(1);
-            display: block;
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        li a{
+            @include font(general);
+            @include size(1.25);
+            font-weight: 400;
+            color: $cor-secundaria;
+            font-size: 1.125rem;
+            padding: 10px 20px;
+            display: inline-block;
+            background-color: $cor-primaria;
+            border-radius: 4px;
+            &:hover{
+                color: $cor-secundaria-lighter;
+                background-color: $cor-primaria-darker;
+            }
+            @include responsive(cellphone){
+                @include size(1);
+                display: block;
+            }
         }
     }
 }

@@ -12,41 +12,43 @@
         justify-content: center;
         gap: 20px;
     }
-}
-
-.title__avatar{
-    justify-self: center;
-    @include responsive (tablet){
-        width: 60%;
+    &__avatar{
+        justify-self: center;
+        @include responsive (tablet){
+            width: 60%;
+        }
+        @include responsive (cellphone){
+            width: 80%;
+        }
+        img{
+            border-radius: 50%;
+            border: 2px solid $cor-detalhe;
+            box-shadow: 0 1px 2px $cor-secundaria;
+        }
     }
-    @include responsive (cellphone){
-        width: 80%;
-    }
-    img{
-        border-radius: 50%;
-        border: 2px solid $cor-detalhe;
-        box-shadow: 0 1px 2px $cor-secundaria;
-    }
-}
-
-.title__content{
-    @include responsive(tablet){
-        text-align: center;
-    }
-    h1{
-        @include font(title-1);
-        @include size(4);
+    &__content{
         @include responsive(tablet){
-            @include size(3);
+            text-align: center;
         }
-        @include responsive(cellphone){
+        h1{
+            @include font(title-1);
+            @include size(4);
+            @include responsive(tablet){
+                @include size(3);
+            }
+            @include responsive(cellphone){
+                @include size(2);
+            }
+        }
+        p{
+            margin-left: 40px;
             @include size(2);
-        }
-    }
-    p{
-        @include size(2);
-        @include responsive(cellphone){
-            @include size(1);
+            @include responsive(tablet){
+                margin-left: 0;
+            }
+            @include responsive(cellphone){
+                @include size(1);
+            }
         }
     }
 }
@@ -58,125 +60,86 @@
     gap: 50px;
     padding-bottom: 0;
     padding-top: 0;
+    @include responsive (tablet){
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
     div h2{
         @include font(title-2);
         @include size(4);
         text-align: center;
         text-shadow: 3px 3px 3px $cor-primaria;
     }
-}
-.experience__content{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    p{
-        @include size(2);
-    }
-}
-.experience__content__item{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    position: relative;
-    background-color: $cor-detalhe;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 20px;
-    h3{
-        @include font (title-2);
-        @include size(1.5);
-    }
-    p{
-        @include size(1.25);
-    }
-    a{
-        position: relative;
-        display: inline-block;
-        background-color: $cor-secundaria-lighter;
-        color: $cor-detalhe;
-        text-align: center;
-        width: max-content;
-        padding: 5px;
-        border-radius: 5px;
-        padding: 10px 20px;
-        &:hover{
-            background-color: $cor-secundaria-darker;
+    &-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        p{
+            @include size(2);
+            @include responsive (tablet){
+                @include size(1.5);
+            }
         }
-    }
-}
-.experience__content__item__title{
-    &::before{
-        position:absolute;
-        left: -10px;
-        content: "";
-        width: 5px;
-        height: 1.5rem;
-        background-color: $cor-primaria;
-    }  
-}
-.experience__content__item__tech{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: top;
-    gap: 10px;
-    li{
-        display:inline-block;
-        background-color: $cor-primaria;
-        height: 20px;
-        padding: 10px;
-        border-radius: 5px;
-        font-weight: 600;
-    }
-}
-@media (max-width: 900px){
-    .exp{
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .exp div h2{
-        font-size: 5rem;
-        word-break: initial;
-    }
-    .exp-content p{
-        font-size: 1.75rem;
-    }
-    .exp-item p{
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 700px){
-    .exp-content p{
-        font-size: 1.5rem;
-    }
-    .exp div h2{
-        font-size: 4rem;
-    }
-    .exp-item p{
-        font-size: 1rem;
-    }
-    .exp-item{
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 500px){
-    .exp{
-        padding: 0 10px;
-    }   
-
-    .exp-content p{
-        font-size: 1rem;
-    }
-    .exp div h2{
-        font-size: 2rem;
-    }
-    .exp-item-cargo{
-        font-size: 1rem;
-    }
-    .exp-item p{
-        font-size: 0.75rem;
+        &-item{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            position: relative;
+            background-color: $cor-detalhe;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            @include responsive(tablet){
+                grid-template-columns: 1fr;
+            }
+            p{
+                @include size(1.25);
+            }
+            a{
+                position: relative;
+                display: inline-block;
+                background-color: $cor-secundaria-lighter;
+                color: $cor-detalhe;
+                text-align: center;
+                width: max-content;
+                padding: 5px;
+                border-radius: 5px;
+                padding: 10px 20px;
+                &:hover{
+                    background-color: $cor-secundaria-darker;
+                }
+            }
+            &__title1{
+                @include font (title-2);
+                @include size(1.5);
+                &::before{
+                    position:absolute;
+                    left: -10px;
+                    content: "";
+                    width: 5px;
+                    height: 1.5rem;
+                    background-color: $cor-primaria;
+                }  
+            }
+            &__title2{
+                @include font (title-2);
+                @include size(1.25);
+            }
+            &__tech{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: top;
+                gap: 10px;
+                li{
+                    display:flex;
+                    place-items: center;
+                    background-color: $cor-primaria;
+                    height: max-content;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                }
+            }
+        }
     }
 }
 

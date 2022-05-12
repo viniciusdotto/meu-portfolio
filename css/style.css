@@ -78,10 +78,7 @@ body img {
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items: center;
-  gap: 100px;
+  padding: 20px 40px;
 }
 
 @media (max-width: 1000px) {
@@ -106,7 +103,7 @@ body img {
   }
 }
 
-.header__menu {
+.header nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -114,7 +111,7 @@ body img {
   gap: 10px;
 }
 
-.header__menu li a {
+.header nav ul li a {
   font-family: monospace, Arial, Helvetica, sans-serif;
   line-height: 30px;
   font-size: 1.25rem;
@@ -127,13 +124,13 @@ body img {
   border-radius: 4px;
 }
 
-.header__menu li a:hover {
+.header nav ul li a:hover {
   color: #3a3a3a;
   background-color: #46f463;
 }
 
 @media (max-width: 500px) {
-  .header__menu li a {
+  .header nav ul li a {
     line-height: 26px;
     font-size: 1rem;
     display: block;
@@ -207,8 +204,15 @@ body img {
 }
 
 .title__content p {
+  margin-left: 40px;
   line-height: 42px;
   font-size: 2rem;
+}
+
+@media (max-width: 1000px) {
+  .title__content p {
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -226,6 +230,13 @@ body img {
   padding-top: 0;
 }
 
+@media (max-width: 1000px) {
+  .experience {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
 .experience div h2 {
   font-family: 'Radio Canada', Arial, Helvetica, sans-serif;
   font-weight: 700;
@@ -236,42 +247,47 @@ body img {
   text-shadow: 3px 3px 3px #8ef8a0;
 }
 
-.experience__content {
+.experience-content {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
 }
 
-.experience__content p {
+.experience-content p {
   line-height: 42px;
   font-size: 2rem;
 }
 
-.experience__content__item {
+@media (max-width: 1000px) {
+  .experience-content p {
+    line-height: 34px;
+    font-size: 1.5rem;
+  }
+}
+
+.experience-content-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
   position: relative;
   background-color: #f1f1f1;
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
   margin-top: 20px;
 }
 
-.experience__content__item h3 {
-  font-family: 'Radio Canada', Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 34px;
-  font-size: 1.5rem;
+@media (max-width: 1000px) {
+  .experience-content-item {
+    grid-template-columns: 1fr;
+  }
 }
 
-.experience__content__item p {
+.experience-content-item p {
   line-height: 30px;
   font-size: 1.25rem;
 }
 
-.experience__content__item a {
+.experience-content-item a {
   position: relative;
   display: inline-block;
   background-color: #3a3a3a;
@@ -283,11 +299,19 @@ body img {
   padding: 10px 20px;
 }
 
-.experience__content__item a:hover {
+.experience-content-item a:hover {
   background-color: black;
 }
 
-.experience__content__item__title::before {
+.experience-content-item__title1 {
+  font-family: 'Radio Canada', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 34px;
+  font-size: 1.5rem;
+}
+
+.experience-content-item__title1::before {
   position: absolute;
   left: -10px;
   content: "";
@@ -296,70 +320,28 @@ body img {
   background-color: #8ef8a0;
 }
 
-.experience__content__item__tech {
+.experience-content-item__title2 {
+  font-family: 'Radio Canada', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 30px;
+  font-size: 1.25rem;
+}
+
+.experience-content-item__tech {
   display: flex;
   flex-wrap: wrap;
   align-items: top;
   gap: 10px;
 }
 
-.experience__content__item__tech li {
-  display: inline-block;
+.experience-content-item__tech li {
+  display: flex;
+  place-items: center;
   background-color: #8ef8a0;
-  height: 20px;
-  padding: 10px;
+  height: max-content;
+  padding: 5px 10px;
   border-radius: 5px;
-  font-weight: 600;
-}
-
-@media (max-width: 900px) {
-  .exp {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  .exp div h2 {
-    font-size: 5rem;
-    word-break: initial;
-  }
-  .exp-content p {
-    font-size: 1.75rem;
-  }
-  .exp-item p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .exp-content p {
-    font-size: 1.5rem;
-  }
-  .exp div h2 {
-    font-size: 4rem;
-  }
-  .exp-item p {
-    font-size: 1rem;
-  }
-  .exp-item {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 500px) {
-  .exp {
-    padding: 0 10px;
-  }
-  .exp-content p {
-    font-size: 1rem;
-  }
-  .exp div h2 {
-    font-size: 2rem;
-  }
-  .exp-item-cargo {
-    font-size: 1rem;
-  }
-  .exp-item p {
-    font-size: 0.75rem;
-  }
 }
 
 /* Formação */
