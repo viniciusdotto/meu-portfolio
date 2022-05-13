@@ -1,0 +1,18 @@
+@mixin font ($type){
+    @if $type == title-1{
+        font-family: 'Italiana', 'Times New Roman', Times, serif;
+    }
+    @else if $type == title-2{
+        font-family: 'Radio Canada', Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    @else if $type == general{
+        font-family: monospace, Arial, Helvetica, sans-serif;
+    }
+}
+
+@mixin size ($size){
+    line-height: $size * 16 + 10px;
+    font-size: $size + rem;
+}

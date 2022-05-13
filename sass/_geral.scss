@@ -1,0 +1,19 @@
+body{
+    @include font(general);
+    @include size(1.25);
+    color: $cor-secundaria-darker;
+    background-color: $cor-detalhe-lighter;
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px;
+        padding-bottom: 100px;
+    }
+    a {
+        text-decoration: none;
+    }
+    img{
+        max-width: 100%;
+        display: block;
+    }
+}

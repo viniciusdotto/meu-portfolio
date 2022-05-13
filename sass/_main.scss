@@ -1,0 +1,309 @@
+/* Título */
+
+.title {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 100px;
+    padding-bottom: 0;
+    padding-top: 0;
+    @include responsive (tablet){
+        grid-template-columns: 1fr;
+        justify-content: center;
+        gap: 20px;
+    }
+    &__avatar{
+        justify-self: center;
+        @include responsive (tablet){
+            width: 60%;
+        }
+        @include responsive (cellphone){
+            width: 80%;
+        }
+        img{
+            border-radius: 50%;
+            border: 2px solid $cor-detalhe;
+            box-shadow: 0 1px 2px $cor-secundaria;
+        }
+    }
+    &__content{
+        @include responsive(tablet){
+            text-align: center;
+        }
+        h1{
+            @include font(title-1);
+            @include size(4);
+            @include responsive(tablet){
+                @include size(3);
+            }
+            @include responsive(cellphone){
+                @include size(2);
+            }
+        }
+        p{
+            margin-left: 40px;
+            @include size(2);
+            @include responsive(tablet){
+                margin-left: 0;
+            }
+            @include responsive(cellphone){
+                @include size(1);
+            }
+        }
+    }
+}
+
+/* Experiência */
+
+.experience{
+    display: grid;  
+    gap: 50px;
+    padding-bottom: 0;
+    padding-top: 0;
+    @include responsive (tablet){
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    div h2{
+        @include font(title-2);
+        @include size(4);
+        text-align: center;
+        text-shadow: 3px 3px 3px $cor-primaria;
+        @include responsive(tablet){
+            @include size(3);
+        }
+        @include responsive(cellphone){
+            @include size(2);
+        }
+    }
+    &-content{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        p{
+            @include size(2);
+            @include responsive (tablet){
+                @include size(1.5);
+            }
+            @include responsive (cellphone){
+                @include size(1.25);
+            }
+        }
+        &-item{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            position: relative;
+            background-color: $cor-detalhe;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            @include responsive(tablet){
+                grid-template-columns: 1fr;
+            }
+            @include responsive(cellphone){
+                gap: 10px;
+            }
+            p{
+                @include size(1.25);
+                @include responsive(cellphone){
+                    @include size(1);
+                }
+            }
+            a{
+                position: relative;
+                display: inline-block;
+                background-color: $cor-secundaria-lighter;
+                color: $cor-detalhe;
+                text-align: center;
+                width: max-content;
+                padding: 5px;
+                border-radius: 5px;
+                padding: 10px 20px;
+                &:hover{
+                    background-color: $cor-secundaria-darker;
+                }
+                @include responsive(cellphone){
+                    @include size(1);
+                }
+            }
+            &__title1{
+                @include font (title-2);
+                @include size(1.5);
+                &::before{
+                    position:absolute;
+                    left: -10px;
+                    content: "";
+                    width: 5px;
+                    height: 1.5rem;
+                    background-color: $cor-primaria;
+                }
+                @include responsive(cellphone){
+                    @include size(1.25);
+                }  
+            }
+            &__title2{
+                @include font (title-2);
+                @include size(1.25);
+                @include responsive(cellphone){
+                    @include size(1);
+                }
+            }
+            &__tech{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: top;
+                gap: 10px;
+                li{
+                    display:flex;
+                    place-items: center;
+                    background-color: $cor-primaria;
+                    height: max-content;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    @include responsive(cellphone){
+                        @include size(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Formação */
+
+.formacao{
+    background-color: $cor-primaria;
+    h2{
+        margin-bottom: 50px;
+        @include font(title-2);
+        @include size(4);
+        text-align: center;
+        color: $cor-detalhe;
+        text-shadow: 3px 3px 3px $cor-secundaria;
+        @include responsive(tablet){
+            @include size(3);
+            margin-bottom: 30px;
+        }
+        @include responsive(cellphone){
+            @include size(2);
+        }
+    }
+    &-content{
+        display: grid;
+        gap: 40px;
+        &-academica{
+            display: grid;
+            gap:20px;
+            p{
+                @include size(2);
+                @include responsive (tablet){
+                    @include size(1.5);
+                }
+                @include responsive (cellphone){
+                    @include size(1.25);
+                }
+            }
+            &__lista{
+                display: flex;
+                gap: 20px;
+                @include responsive(tablet){
+                    flex-direction: column;
+                }
+                li{
+                    background-color: $cor-detalhe;
+                    width: 25ch;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 10px;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    position: relative;
+                    @include responsive(tablet){
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                    p{
+                        @include size(1);
+                    }
+                    h3{
+                        @include size(1.5);
+                        @include responsive(tablet){
+                            @include size(1.25);
+                        }
+                        &::before{
+                            position:absolute;
+                            left: -10px;
+                            content: "";
+                            width: 5px;
+                            height: 1.5rem;
+                            background-color: $cor-secundaria;
+                        }
+                    }
+                }
+            }
+        }
+        &-intensiva{
+            display: grid;
+            gap: 20px;
+            position: relative;
+            h3{
+                text-transform: uppercase;
+                &::before{
+                    position: absolute;
+                    top: 0.25rem;
+                    left: -2rem;
+                    content: "";
+                    width: 1rem;
+                    height: 1rem;
+                    background-color: $cor-detalhe;
+                    border-radius: 90px;
+                }
+            }
+            &__lista{
+                display: grid;
+                gap:10px;
+                @include responsive(tablet){
+                    @include size(1);
+                }
+                @include responsive(cellphone){
+                    @include size(0.75);
+                }
+                li{
+                    display: grid;
+                    grid-template-columns: auto auto 5ch;
+                    p{
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        &-idiomas{
+            display: grid;
+            gap: 20px;
+            position: relative;
+            h3{
+                text-transform: uppercase;
+                &::before{
+                    position: absolute;
+                    top: 0.25rem;
+                    left: -2rem;
+                    content: "";
+                    width: 1rem;
+                    height: 1rem;
+                    background-color: $cor-detalhe;
+                    border-radius: 90px;
+                }
+            }
+            ul{
+                @include responsive(tablet){
+                    @include size(1);
+                }
+                @include responsive(cellphone){
+                    @include size(0.75);
+                }
+            }
+        }    
+    }
+}
