@@ -14,10 +14,6 @@ Este é o repositório do meu portfólio pessoal em formato de site, desenvolvid
 - **HTML5**
 - **CSS3** (com [Sass](https://sass-lang.com/) para pré-processamento)
 - **JavaScript**
-- **Ruby on Rails** (em projetos destacados)
-- **Ruby**
-- **PostgreSQL**
-- **SQLite**
 
 ## Estrutura do Projeto
 
