@@ -1,11 +1,11 @@
 .footer{
+    background-color: $cor-secundaria-lighter;
+    color: $cor-detalhe;
     &-container{
         max-width: 1200px;
         margin: 0 auto;
         padding: 40px;
     }
-    background-color: $cor-secundaria-lighter;
-    color: $cor-detalhe;
     &-contato{
         display: grid;
         grid-template-columns: 1fr 1fr;

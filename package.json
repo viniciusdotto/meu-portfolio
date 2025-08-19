@@ -1,0 +1,24 @@
+{
+  "name": "meu-portfolio",
+  "version": "1.0.0",
+  "description": "Meu portfólio em forma de site.",
+  "homepage": "https://github.com/viniciusdotto/meu-portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/viniciusdotto/meu-portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciusdotto/meu-portfolio.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch scss:css --style compressed"
+  },
+  "dependencies": {
+    "sass": "^1.90.0"
+  }
+}

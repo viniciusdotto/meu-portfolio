@@ -56,7 +56,7 @@
 /* Experiência */
 
 .experience{
-    display: grid;  
+    display: none;  
     gap: 50px;
     padding-bottom: 0;
     padding-top: 0;
@@ -173,6 +173,7 @@
 /* Formação */
 
 .formacao{
+    display: none;
     background-color: $cor-primaria;
     h2{
         margin-bottom: 50px;
