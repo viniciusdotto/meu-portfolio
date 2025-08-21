@@ -1,8 +1,11 @@
+@use "cores";
+@use "tipografia";
+
 body{
-    @include font(general);
-    @include size(1.25);
-    color: $cor-secundaria-darker;
-    background-color: $cor-detalhe-lighter;
+    @include tipografia.font(general);
+    @include tipografia.size(2);
+    color: cores.$g8;
+    background-color: cores.$g1;
     .container{
         max-width: 1200px;
         margin: 0 auto;

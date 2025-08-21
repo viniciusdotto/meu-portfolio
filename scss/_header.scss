@@ -1,44 +1,44 @@
+@use "cores";
+@use "responsive";
+@use "tipografia";
+
 .header{
-    padding: 20px 40px;
-    @include responsive(tablet){
-        header{
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-    }
-    h1{
-        @include font(title-1);
-        @include size(4);
-        display: inline-block;
-        text-align: center;
-        @include responsive (cellphone){
-            @include size(3);
-        }
-    }
+    padding: 2.5rem 0;
+    background-color: cores.$g12;
     nav ul{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 10px;
-        li a{
-            @include font(general);
-            @include size(1.25);
+        gap: 1.5rem;
+        li {
+            @include tipografia.font(general);
+            @include tipografia.size(1.25);
+            cursor: pointer;
+            padding: 0.5rem 1rem;
             font-weight: 400;
-            color: $cor-secundaria;
-            font-size: 1.125rem;
-            padding: 10px 20px;
-            display: inline-block;
-            background-color: $cor-primaria;
-            border-radius: 4px;
+            color: cores.$e3;
+            border: 1px solid cores.$e4;
+            border-radius: 0.25rem;
             &:hover{
-                color: $cor-secundaria-lighter;
-                background-color: $cor-primaria-darker;
+                color: cores.$g1;
+                border-color: cores.$g1;
             }
-            @include responsive(cellphone){
-                @include size(1);
+            @include responsive.responsive(cellphone){
+                @include tipografia.size(1);
                 display: block;
             }
+        }
+        .active {
+            background-color: cores.$e4;
+            color: cores.$g1;
+            border-color: cores.$g1;
+        }
+    }
+    @include responsive.responsive(tablet){
+        header{
+            grid-template-columns: 1fr;
+            gap: 1rem;
         }
     }
 }

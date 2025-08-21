@@ -1,12 +1,11 @@
 // Reset dos estilos
-@import 'reset';
+@use 'reset';
 // Cores e Tipografia
-@import 'cores';
-@import 'tipografia';
+@use 'cores';
+@use 'tipografia';
 // Estilos Gerais
-@import 'geral';
-@import 'responsive';
+@use 'geral';
+@use 'responsive';
 // Estilos de cada seção
-@import 'header';
-@import 'main';
-@import 'footer';
+@use 'header';
+@use 'main';
