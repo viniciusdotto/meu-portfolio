@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    // Output Configuration
+    "target": "es5",
+    "module": "commonjs",
+    "outDir": "./js",
+    "rootDir": "./ts",
+    
+    // Strict Typing - Force Types
+    "noImplicitAny": true,
+    
+    // Essential Options
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    // No source maps or declarations for production
+    "sourceMap": false,
+    "declaration": false,
+    "removeComments": true
+  },
+  "include": [
+    "ts/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "js"
+  ]
+}
